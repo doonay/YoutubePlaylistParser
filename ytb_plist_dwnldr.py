@@ -36,6 +36,11 @@ def list_grabber(list_link: str):
   channel_name = clear_name(playlist.owner)
   playlist_name = clear_name(playlist.title)
   
+  if os.path.exists('lists'):
+    pass
+  else:
+    os.mkdir('lists')
+
   if os.path.exists('lists/' + clear_name(channel_name)):
     if os.path.exists('lists/' + clear_name(channel_name) + '/' + clear_name(playlist_name)):
       pass
